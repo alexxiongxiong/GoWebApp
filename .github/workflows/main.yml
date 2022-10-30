@@ -21,6 +21,7 @@ env:
   
 jobs:
   build:
+    name: build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@main
@@ -60,6 +61,8 @@ jobs:
         arguments: --force true
  
   deploy:
+    name: deploy
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
     
