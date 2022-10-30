@@ -58,7 +58,8 @@ jobs:
         secret-name: ${{ env.SECRET }}-registry-connection
         namespace: ${{ env.NAMESPACE }}
         arguments: --force true
-    
+ 
+   deploy:
     # Deploy app to AKS
     - uses: azure/k8s-deploy@v1
       with:
