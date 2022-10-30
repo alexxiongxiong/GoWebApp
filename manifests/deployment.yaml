@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: goweb
-        image: 18351928002/my-golang-webapp:latest
+        image: alexrampuptest.azurecr.io/alexgoapp1030:v1
         ports:
         - containerPort: 8000
