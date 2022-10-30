@@ -15,7 +15,7 @@ jobs:
           go-version: 1.15
 
       - name: Build
-        run: go build -v ./package_main.go
+        run: go build -v package_main.go
 
       - name: Test
-        run: go test -v ./package_main
+        run: go test -v package_main
