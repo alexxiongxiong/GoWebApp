@@ -59,7 +59,10 @@ jobs:
         namespace: ${{ env.NAMESPACE }}
         arguments: --force true
  
-   deploy:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    
     # Deploy app to AKS
     - uses: azure/k8s-deploy@v1
       with:
