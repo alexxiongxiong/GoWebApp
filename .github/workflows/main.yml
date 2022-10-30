@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+      
+# able to manually run a workflow
   workflow_dispatch:
   
 # Environment variables available to all jobs and steps in this workflow
