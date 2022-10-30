@@ -17,7 +17,7 @@ env:
 # create a secret resource in AKS used to store the credential of ACR  
   SECRET: akscicdgithubaction
 # APP_NAME is the repostory name of ACR  
-  APP_NAME: alexapp20220531
+  APP_NAME: alexgoapp1030
   
 jobs:
   build:
