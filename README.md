@@ -7,5 +7,7 @@ Simple Web Server
 4. Everything in Github 
 
 
+
 How to use:
+
 Doployment/service yaml was set in manifests directory.
