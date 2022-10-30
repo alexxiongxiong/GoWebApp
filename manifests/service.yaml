@@ -13,8 +13,7 @@ spec:
   - IPv4
   ipFamilyPolicy: SingleStack
   ports:
-  - nodePort: 31898
-    port: 8000
+  - port: 8000
     protocol: TCP
     targetPort: 8000
   selector:
