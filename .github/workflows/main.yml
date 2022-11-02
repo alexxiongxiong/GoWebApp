@@ -30,7 +30,7 @@ jobs:
     
     # Connect to Azure Container Registry (ACR)
     - uses: azure/docker-login@v1
-      if: ${{ contains(env.REGISTRY_NAME, 'alex') && ${{ success() }} }}
+      if: contains(env.REGISTRY_NAME, 'alex') && ${{ failure() }}
       with:
         login-server: ${{ env.REGISTRY_NAME }}.azurecr.io
         username: ${{ secrets.REGISTRY_USERNAME }} 
