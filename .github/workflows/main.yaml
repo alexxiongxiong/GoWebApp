@@ -21,6 +21,7 @@ env:
   
 jobs:
   build:
+    name: build
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@main
@@ -39,7 +40,14 @@ jobs:
         docker push ${{ env.REGISTRY_NAME }}.azurecr.io/${{ env.APP_NAME }}:${{ github.sha }}
       working-directory: ./
     
-    # Set the target Azure Kubernetes Service (AKS) cluster. 
+    # Set the target Azure Kubernetes Service (AKS) cluster.
+  deploy:
+    name: deploy
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    
     - uses: azure/aks-set-context@v1
       with:
         creds: '${{ secrets.AZURE_CREDENTIALS }}'
