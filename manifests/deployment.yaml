@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: goweb
-        image: alexrampuptest.azurecr.io/webapp:v1
+        image: alexrampuptest.azurecr.io/webapp:<BUILD_TAG>
         ports:
         - containerPort: 8000
